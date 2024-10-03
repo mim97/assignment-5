@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Lexend -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy Ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "rgb(180, 244, 97)",
+              background: "rgb(30, 30, 30)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend-font px-10 py-2 lg:px-28 lg:py-12">
+    <header class="sticky top-0 z-50 bg-pink-100">
+      <div class="navbar bg-pink-100 flex justify-between">
+        <button class="btn bg-primary font-semibold">
+          <a href="./blog.html">Blog</a>
+        </button>
+        <a class="btn btn-ghost text-xl font-semibold hidden lg:flex"
+          ><img src="assets/logo.png" alt="" /> Donate Bangladesh</a
+        >
+        <p>
+          <img src="assets/coin.png" alt="" /><span id="main-balance">5500</span
+          ><span>BDT</span>
+        </p>
+      </div>
+      <div class="flex justify-center items-center gap-5 mt-7 mb-4">
+        <button
+          id="btn-donation"
+          onclick="showBtn()"
+          class="btn bg-primary font-semibold"
+        >
+          Donation
+        </button>
+        <button id="btn-history" onclick="showBtn2()" class="btn font-semibold">
+          History
+        </button>
+      </div>
+    </header>
+    <main class="mt-10">
+      <section>
+        <!-- card section start -->
+        <div id="donation-section" class="mt-10 space-y-5">
+          <!-- card-1 -->
+          <div class="p-5 grid grid-cols-1 lg:grid-cols-2 border rounded-lg">
+            <div class="col-span-1">
+              <img src="assets/noakhali.png" alt="" />
+            </div>
+            <div class="col-span-1 space-y-4">
+              <div class="p-2 rounded-md w-36 bg-slate-200">
+                <div class="flex space-x-3">
+                  <img src="assets/coin.png" alt="" /><span id="noakhali"
+                    >10000</span
+                  ><span>BDT</span>
+                </div>
+              </div>
+              <h3 class="font-bold">
+                Donate for Flood at Noakhali, Bangladesh
+              </h3>
+              <p class="font-light">
+                The recent floods in Noakhali have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+              <label class="form-control w-full">
+                <input
+                  id="input-field-card-1"
+                  type="number"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <button id="input-card-1" class="btn bg-primary w-full">
+                Donate
+              </button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box text-center space-y-3">
+                  <h3 class="text-lg font-extrabold">Congrats!</h3>
+                  <img class="mx-auto" src="assets/coin.png" alt="" />
+                  <p class="py-4">You Have Donated for Humankind</p>
+                  <h3 class="text-sm font-bold">Successfully</h3>
+                  <div class="modal-action">
+                    <form method="dialog" class="mx-auto">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn bg-primary">Close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+          <!-- card-2 -->
+          <div class="p-5 grid grid-cols-1 lg:grid-cols-2 border rounded-lg">
+            <div class="col-span-1">
+              <img src="assets/feni.png" alt="" />
+            </div>
+            <div class="col-span-1 space-y-4">
+              <div class="p-2 rounded-md w-36 bg-slate-200">
+                <div class="flex space-x-3">
+                  <img src="assets/coin.png" alt="" /><span id="feni"
+                    >10200</span
+                  ><span>BDT</span>
+                </div>
+              </div>
+              <h3 class="font-bold">Aid for Injured in the Quota Movement</h3>
+              <p class="font-light">
+                The recent floods in Feni have devastated local communities,
+                leading to severe disruption and loss. Your generous donation
+                will help provide immediate aid, including food, clean water,
+                and medical supplies, to those affected by this calamity.
+                Together, we can offer crucial support and help rebuild lives in
+                the aftermath of this disaster. Every contribution counts
+                towards making a real difference. Please consider donating today
+                to assist those in urgent need.
+              </p>
+              <label class="form-control w-full">
+                <input
+                  id="input-field-card-2"
+                  type="number"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <button id="input-card-2" class="btn bg-primary w-full">
+                Donate
+              </button>
+              <dialog id="my_modal_2" class="modal">
+                <div class="modal-box text-center space-y-3">
+                  <h3 class="text-lg font-extrabold">Congrats!</h3>
+                  <img class="mx-auto" src="assets/coin.png" alt="" />
+                  <p class="py-4">You Have Donated for Humankind</p>
+                  <h3 class="text-sm font-bold">Successfully</h3>
+                  <div class="modal-action">
+                    <form method="dialog" class="mx-auto">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn bg-primary">Close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div class="p-5 grid grid-cols-1 lg:grid-cols-2 border rounded-lg">
+            <div class="col-span-1">
+              <img src="assets/quota-protest.png" alt="" />
+            </div>
+            <div class="col-span-1 space-y-4">
+              <div class="p-2 rounded-md w-36 bg-slate-200">
+                <div class="flex space-x-3">
+                  <img src="assets/coin.png" alt="" /><span id="quota"
+                    >10030</span
+                  ><span>BDT</span>
+                </div>
+              </div>
+              <h3 class="font-bold">Aid for Injured in the Quota Movement</h3>
+              <p class="font-light">
+                The recent Quota movement has resulted in numerous injuries and
+                significant hardship for many individuals. Your support is
+                crucial in providing medical assistance, rehabilitation, and
+                necessary supplies to those affected. By contributing, you help
+                ensure that injured individuals receive the care and support
+                they need during this challenging time. Every donation plays a
+                vital role in alleviating their suffering and aiding in their
+                recovery. Please consider making a donation to support these
+                brave individuals in their time of need.
+              </p>
+              <label class="form-control w-full">
+                <input
+                  id="input-field-card-3"
+                  type="number"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <button id="input-card-3" class="btn bg-primary w-full">
+                Donate
+              </button>
+              <dialog id="my_modal_3" class="modal">
+                <div class="modal-box text-center space-y-3">
+                  <h3 class="text-lg font-extrabold">Congrats!</h3>
+                  <img class="mx-auto" src="assets/coin.png" alt="" />
+                  <p class="py-4">You Have Donated for Humankind</p>
+                  <h3 class="text-sm font-bold">Successfully</h3>
+                  <div class="modal-action">
+                    <form method="dialog" class="mx-auto">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn bg-primary">Close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+        <!-- card section ends -->
+
+        <!-- history section start -->
+        <div id="history-section" class="hidden items-center text-center">
+          <h2>Donation History</h2>
+          <div id="donation-history"></div>
+        </div>
+        <!-- history section ends -->
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
